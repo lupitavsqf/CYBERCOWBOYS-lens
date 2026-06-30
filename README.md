@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div align="center">
 
 <img src="docs/images/start-screen.png" alt="CyberCowboys start screen" width="320"/>
@@ -200,3 +201,6 @@ Just open **[cybercowboys.fly.dev](https://cybercowboys.fly.dev)** in any browse
 Made with grit and good intentions by the **CyberCowboys** team — born out of volunteering in assistive equine therapy, and a belief that we can communicate beyond words.
 
 🐴 *Yeehaw.*
+=======
+# CYBERCOWBOYS
+>>>>>>> 6913b1832701b2f5410fedd95e458d7bc4ee074d
