@@ -1,0 +1,107 @@
+- !<AssetImportMetadata/d7d00ceb-a59f-4355-ab62-d5516d6074b2>
+  ImportedAssetIds:
+    .hidden/M_StopSign: !<reference> ffac65be-7613-4c5c-8f05-1c87db3272fd
+    .hidden/white: !<reference> b4df7171-988e-4f4b-ad85-aab70ef9aef1
+    66780cf3a4dcb2b8: !<reference> 9bd12839-bede-4788-ab73-61bbad4365a2
+    8a96964ed16d2bb0: !<reference> 7b0f4e83-18df-4da6-927d-cb5ac26a312f
+    Materials/M_StopSign: !<reference> be82f18d-d8a4-4a35-be9b-4a11fe47322e
+    Materials/M_StopSign|M_StopSign|GraphPassInfo: !<reference> 0a2aa5f7-0c9e-436e-abaf-343ea44e11b9
+    Meshes/StopSign: !<reference> 37a91b16-bbf6-4c00-aebc-25f53155f0c0
+    Scene: !<reference> 62847c30-a20b-4659-81a9-8fe6faae96a9
+    dbe6728811e9a8c8: !<reference> d1a2ffc7-2bc5-4d37-a88e-48da49715876
+  ImporterName: FbxImporter
+  PrimaryAsset: !<reference> 62847c30-a20b-4659-81a9-8fe6faae96a9
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CanBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> f1adf56a-9b72-45e7-b68c-b0f15ef93786
+  DependentFiles:
+    []
+  ImporterSettings: !<FbxImporterSettings>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+    AnimationCurveOptimization: true
+    CustomAnimationSamplingRate: 30.000000
+    ImportVertexColor: true
+    ImportTangentsAndBinormals: true
+    RegenerateTangentsAndBinormals: false
+    RegenerateNormalsForSkinnedMeshes: true
+    ImportBlendShapeAnimation: true
+    ImportVertexAnimation: true
+    GeneratePivots: true
+    TriangulateNURBS: true
+    UseLegacyFbxLoader: false
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+      Performance Compression: !<SingleCompressionSettings>
+        CompressorName: Performance
+        CompressionSettings: !<TextureCompressionMipmapSettings>
+          Level: Medium
+          Mipmap: false
+    ExtensionMappings:
+      mesh: None Compression
+      jpg: Performance Compression
+    Overrides:
+      {}
+- !<SceneObject/7b0f4e83-18df-4da6-6d82-34a53d95ced0>
+  PrefabRemaps:
+    []
+  Name: StopSign
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> d1a2ffc7-2bc5-4d37-5771-b725b68ea789
+- !<SceneObject/9bd12839-bede-4788-548c-9e4452bc9a5d>
+  PrefabRemaps:
+    []
+  Name: Stop Sign
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 7b0f4e83-18df-4da6-6d82-34a53d95ced0
+  Components:
+    []
+- !<RenderMeshVisual/d1a2ffc7-2bc5-4d37-5771-b725b68ea789>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> be82f18d-d8a4-4a35-be9b-4a11fe47322e
+  Mesh: !<reference> 37a91b16-bbf6-4c00-aebc-25f53155f0c0
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefabAssetData/f1adf56a-9b72-45e7-b68c-b0f15ef93786>
+  Prototype: !<ObjectOwner/d5d0e19f-b6d9-4210-9a8f-f112f4c61222>
+    PackagePath: ""
+    objects:
+      - !<own> 9bd12839-bede-4788-548c-9e4452bc9a5d

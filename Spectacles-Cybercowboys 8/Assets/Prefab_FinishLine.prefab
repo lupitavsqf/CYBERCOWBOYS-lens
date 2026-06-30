@@ -1,0 +1,58 @@
+- !<ObjectPrefab/c2bbbdbe-42fa-4db6-8635-91b1b973ac8b>
+  PackagePath: ""
+  objects:
+    - !<own> 83b825af-aee1-475f-b83f-30a927d59e68
+  LazyLoading: false
+  RetainAssets: true
+- !<RenderMeshVisual/55d06b26-3839-449b-8c9f-e4250c6e528f>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c54cc7db-c592-4933-85b3-c1d6f5f4cb80
+  Mesh: !<reference> 73684fd2-674e-4e05-9357-665440103c94
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/734b6ae0-71e6-4c5c-b942-5b59f8d7021f>
+  PrefabRemaps:
+    []
+  Name: FinishLine
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 55d06b26-3839-449b-8c9f-e4250c6e528f
+- !<SceneObject/83b825af-aee1-475f-b83f-30a927d59e68>
+  PrefabRemaps:
+    - 55d06b26-3839-449b-8c9f-e4250c6e528f: 55d06b26-3839-449b-7360-1bdaf391ad70
+    - 734b6ae0-71e6-4c5c-b942-5b59f8d7021f: 734b6ae0-71e6-4c5c-46bd-a4a60728fde0
+    - 83b825af-aee1-475f-b83f-30a927d59e68: 83b825af-aee1-475f-47c0-cf56d82a6197
+  Name: Finish Line
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 734b6ae0-71e6-4c5c-b942-5b59f8d7021f
+  Components:
+    []

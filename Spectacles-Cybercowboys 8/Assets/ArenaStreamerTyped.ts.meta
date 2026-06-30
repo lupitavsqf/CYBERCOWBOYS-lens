@@ -1,0 +1,134 @@
+- !<AssetImportMetadata/1db9404f-6e4a-4ba1-8484-aa782aad0118>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> cadf6a47-4e57-4515-99ee-77d8678a4688
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> cadf6a47-4e57-4515-99ee-77d8678a4688
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 5ddc41a1-c141-478d-b91c-e8a1e75cf32a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/5ddc41a1-c141-478d-b91c-e8a1e75cf32a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 8393b51d-ce5b-44b8-a404-78412baacd77
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    alertAudio: false
+    arenaRoot: false
+    arenaScale: false
+    barrelPrefab: false
+    camera: false
+    cavalettiPrefab: false
+    conePrefab: false
+    defaultObstaclePrefab: false
+    enableLogging: false
+    finishLinePrefab: false
+    flipHandedness: false
+    groundOffsetCm: false
+    internetModule: false
+    logTypes: false
+    numberTagFaceCamera: false
+    numberTagFont: false
+    numberTagHeightMeters: false
+    numberTagScale: false
+    numberTagYawOffsetDeg: false
+    obstacleBaseScale: false
+    obstacleYawOffsetDeg: false
+    pathTrianglePrefab: false
+    pauseZonePrefab: false
+    polePrefab: false
+    proximityRadiusMeters: false
+    startLinePrefab: false
+    targetSession: false
+    triangleSizeMeters: false
+    triangleYawOffsetDeg: false
+    verticalPrefab: false
+    websocketUrl: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - internetModule: !<reference.InternetModule> 00000000-0000-0000-0000-000000000000
+      websocketUrl: "wss://cybercowboys.fly.dev/"
+      arenaRoot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      camera: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      conePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      polePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      barrelPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      verticalPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      cavalettiPrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      pauseZonePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      startLinePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      finishLinePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      defaultObstaclePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      pathTrianglePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      numberTagFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
+      numberTagHeightMeters: 1.500000
+      numberTagScale: !<float> 1.000000
+      numberTagFaceCamera: true
+      numberTagYawOffsetDeg: !<float> 0.000000
+      targetSession: !<float> 0.000000
+      arenaScale: !<float> 1.000000
+      obstacleBaseScale: !<float> 1.000000
+      triangleSizeMeters: 0.750000
+      groundOffsetCm: 0.800000
+      flipHandedness: false
+      triangleYawOffsetDeg: !<float> 0.000000
+      obstacleYawOffsetDeg: !<float> 0.000000
+      enableLogging: true
+      logTypes: true
+      alertAudio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      proximityRadiusMeters: 1.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - // @input Asset.InternetModule internetModule
+    - '// @input string websocketUrl = "wss://cybercowboys.fly.dev/"'
+    - // @input SceneObject arenaRoot
+    - // @input SceneObject camera
+    - // @input Asset.ObjectPrefab conePrefab
+    - // @input Asset.ObjectPrefab polePrefab
+    - // @input Asset.ObjectPrefab barrelPrefab
+    - // @input Asset.ObjectPrefab verticalPrefab
+    - // @input Asset.ObjectPrefab cavalettiPrefab
+    - // @input Asset.ObjectPrefab pauseZonePrefab
+    - '// @input Asset.ObjectPrefab startLinePrefab {"hint":"FBX prefab for the START line. Import startline.fbx, make a prefab, drag it here. Placed on the floor like any obstacle."}'
+    - '// @input Asset.ObjectPrefab finishLinePrefab {"hint":"FBX prefab for the FINISH line. Import finishline.fbx, make a prefab, drag it here. Placed on the floor like any obstacle."}'
+    - // @input Asset.ObjectPrefab defaultObstaclePrefab
+    - // @input Asset.ObjectPrefab pathTrianglePrefab
+    - '// @input Asset.Font numberTagFont {"hint":"Zilla Slab font asset. Import ZillaSlab-Bold.ttf into Assets, then drag the Font asset here."}'
+    - '// @input float numberTagHeightMeters = 1.5 {"hint":"How high the number floats off the floor, in arena-metres. ~1.5 ≈ eye / sight level at full arenaScale."}'
+    - '// @input float numberTagScale = 1 {"hint":"Overall size multiplier for the floating number. Increase if the digits read too small."}'
+    - '// @input bool numberTagFaceCamera = true {"hint":"Keep each number turned toward the wearer (yaw only, stays upright). Off = the number faces into the arena."}'
+    - '// @input float numberTagYawOffsetDeg {"hint":"Spin the number by this many degrees if it ends up facing away from you (try 180)."}'
+    - // @input float targetSession
+    - // @input float arenaScale = 1
+    - // @input float obstacleBaseScale = 1
+    - // @input float triangleSizeMeters = 0.75
+    - // @input float groundOffsetCm = 0.8
+    - // @input bool flipHandedness
+    - // @input float triangleYawOffsetDeg
+    - // @input float obstacleYawOffsetDeg
+    - // @input bool enableLogging = true
+    - // @input bool logTypes = true
+    - // @input Component.AudioComponent alertAudio
+    - // @input float proximityRadiusMeters = 1.5

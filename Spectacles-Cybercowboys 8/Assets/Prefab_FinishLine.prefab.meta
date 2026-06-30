@@ -1,0 +1,71 @@
+- !<AssetImportMetadata/f8db3152-163a-482e-b972-9b6f3257a54c>
+  ImportedAssetIds:
+    ObjectPrefab: !<reference> c2bbbdbe-42fa-4db6-8635-91b1b973ac8b
+  ImporterName: ObjectPrefabImporter
+  PrimaryAsset: !<reference> c2bbbdbe-42fa-4db6-8635-91b1b973ac8b
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    ObjectPrefab: !<own> 52e193cc-8d8b-42c3-a1a6-af18d05f17cf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<ObjectPrefabAssetData/52e193cc-8d8b-42c3-a1a6-af18d05f17cf>
+  Prototype: !<ObjectOwner/087ab795-0245-4780-b177-ac764c702498>
+    PackagePath: ""
+    objects:
+      - !<own> 83b825af-aee1-475f-47c0-cf56d82a6197
+- !<RenderMeshVisual/55d06b26-3839-449b-7360-1bdaf391ad70>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> c54cc7db-c592-4933-85b3-c1d6f5f4cb80
+  Mesh: !<reference> 73684fd2-674e-4e05-9357-665440103c94
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<SceneObject/734b6ae0-71e6-4c5c-46bd-a4a60728fde0>
+  PrefabRemaps:
+    []
+  Name: FinishLine
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 55d06b26-3839-449b-7360-1bdaf391ad70
+- !<SceneObject/83b825af-aee1-475f-47c0-cf56d82a6197>
+  PrefabRemaps:
+    []
+  Name: Finish Line
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 734b6ae0-71e6-4c5c-46bd-a4a60728fde0
+  Components:
+    []
