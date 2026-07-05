@@ -1,0 +1,144 @@
+- !<AssetImportMetadata/9a4298e9-2806-42bb-b362-062512fec010>
+  ImportedAssetIds:
+    .hidden/M_Stop_Sign_Edge: !<reference> 724c9d2b-6a4e-4fae-96c7-e9524d571d4b
+    .hidden/white: !<reference> 4001c108-8639-4b8d-bd44-f88d9fb3cc5c
+    4257c07dd26525d3: !<reference> 65894a93-feca-4f01-bec2-643b94c1b36a
+    56946c357325e9eb: !<reference> c65658ee-a344-4b86-92f1-61657ad66a88
+    66780cf3a4dcb2b8: !<reference> 65108c56-f626-48e6-92e5-1c4a71836ce2
+    8eb05c12faec0bf0: !<reference> a8de651a-be43-4969-9ca0-8483a5e71f59
+    92043f7c7bfdf905: !<reference> 893f2153-898a-4676-b3bc-6085dfa00d26
+    Materials/M_Stop_Sign_Edge: !<reference> eb579f2d-3955-4ad9-b46a-7ad7de266b50
+    Materials/M_Stop_Sign_Edge|M_Stop_Sign_Edge|GraphPassInfo: !<reference> 3a57493b-7d6a-4f9e-a3ab-413bc08f139f
+    Materials/M_Stop_Sign_Face: !<reference> ea6a974f-555d-4cb2-89ec-156badbdea2f
+    Materials/M_Stop_Sign_Face|M_Stop_Sign_Face|GraphPassInfo: !<reference> 2bcbc702-1262-49b4-a674-c6c41ee8a0f8
+    Meshes/Sign_Edge: !<reference> c99020f4-8375-43a0-9309-347258226861
+    Meshes/Sign_Face: !<reference> 9f0f8334-850a-4add-b8ad-44785b643855
+    Scene: !<reference> 22216d32-a67a-4146-97aa-0c1aac664d1d
+    Textures/M_Stop_Sign_BaseColor: !<reference> 2f39bd98-41f0-4118-ad6c-5652bfcdaa83
+    Textures/M_Stop_Sign_Edge_BaseColor: !<reference> 19739fd0-d676-4498-b8e5-14b73f405d26
+    Textures/M_Stop_Sign_Normal: !<reference> 2823ca16-3c3d-4180-afe6-fd2d6e0ad7e8
+  ImporterName: ObjImporter
+  PrimaryAsset: !<reference> 22216d32-a67a-4146-97aa-0c1aac664d1d
+  PackageType: LegacyPackage
+  LegacyPackagePolicy: CanBeUnpackedTransparent
+  ExtraData:
+    {}
+  AssetDataMap:
+    Scene: !<own> 75bbcaff-3774-47bf-9073-206d268cb971
+  DependentFiles:
+    - M_Stop_Sign_BaseColor.png
+    - M_Stop_Sign_Edge_BaseColor.png
+    - M_Stop_Sign_Normal.png
+    - stop_sign.mtl
+  ImporterSettings: !<D3FileImporterSettingsBase>
+    UseLegacyImporter: false
+    WithMaterials: true
+    NamingConvention: ByCategorySanitizeV2
+    PersistentIdGenerationAlgorithm: DescriptorBased
+  CompressionSettings: !<ComplexCompressionSettings>
+    Presets:
+      Performance Compression: !<SingleCompressionSettings>
+        CompressorName: Performance
+        CompressionSettings: !<TextureCompressionMipmapSettings>
+          Level: Medium
+          Mipmap: false
+      None Compression: !<SingleCompressionSettings>
+        CompressorName: None
+        CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+    ExtensionMappings:
+      png: Performance Compression
+      jpg: Performance Compression
+      mesh: None Compression
+    Overrides:
+      {}
+- !<SceneObject/65108c56-f626-48e6-6d1a-e3b58e7c931d>
+  PrefabRemaps:
+    []
+  Name: stop_sign
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> 893f2153-898a-4676-4c43-9f7a205ff2d9
+    - !<own> a8de651a-be43-4969-635f-7b7c5a18e0a6
+  Components:
+    []
+- !<RenderMeshVisual/65894a93-feca-4f01-413d-9bc46b3e4c95>
+  PrefabRemaps:
+    []
+  Name: component_1
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> eb579f2d-3955-4ad9-b46a-7ad7de266b50
+  Mesh: !<reference> c99020f4-8375-43a0-9309-347258226861
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefabAssetData/75bbcaff-3774-47bf-9073-206d268cb971>
+  Prototype: !<ObjectOwner/1da2393c-74e1-4eb2-ac0e-1b3bd4ec3f47>
+    PackagePath: ""
+    objects:
+      - !<own> 65108c56-f626-48e6-6d1a-e3b58e7c931d
+- !<SceneObject/893f2153-898a-4676-4c43-9f7a205ff2d9>
+  PrefabRemaps:
+    []
+  Name: Sign_Face
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> c65658ee-a344-4b86-6d0e-9e9a85299577
+- !<SceneObject/a8de651a-be43-4969-635f-7b7c5a18e0a6>
+  PrefabRemaps:
+    []
+  Name: Sign_Edge
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 65894a93-feca-4f01-413d-9bc46b3e4c95
+- !<RenderMeshVisual/c65658ee-a344-4b86-6d0e-9e9a85299577>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> ea6a974f-555d-4cb2-89ec-156badbdea2f
+  Mesh: !<reference> 9f0f8334-850a-4add-b8ad-44785b643855
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
