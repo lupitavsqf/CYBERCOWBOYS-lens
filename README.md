@@ -20,9 +20,7 @@
 
 ## 🌵 The story behind it
 
-After volunteering in assistive **equine therapy** sessions, we noticed something. Some riders with disabilities have a hard time receiving *verbal* instructions — but they respond beautifully to *tactile* ones.
-
-That insight became **ReinGuide**: a set of digital reins with a remote controller that lets an instructor give tactile cues to a rider during a lesson. Spectacles is the technology we'd been waiting for to take that idea further and **communicate beyond words**.
+After volunteering in assistive **equine therapy** sessions, we noticed something. Some riders with disabilities have a hard time receiving *verbal* instructions. Spectacles is the technology we'd been waiting for to **communicate beyond words**.
 
 **CyberCowboys** is the next step: an augmented-reality riding experience where horse-riding lessons become something you can *see* laid out on the real arena floor in front of you. From elementary basic commands all the way up to advanced jumping courses.
 
@@ -43,7 +41,7 @@ That insight became **ReinGuide**: a set of digital reins with a remote controll
 
 ## 🎬 See it in action
 
-| Riding through a course | Calibrating to the real arena |
+| Riding through a course | Calibrating |
 |:--:|:--:|
 | ![Riding](docs/gifs/riding.gif) | ![Calibrating](docs/gifs/calibrating.gif) |
 
@@ -51,7 +49,6 @@ That insight became **ReinGuide**: a set of digital reins with a remote controll
 |:--:|:--:|
 | ![Creating an arena](docs/gifs/creating-arena.gif) | ![Picking an arena](docs/gifs/picking-arena.gif) |
 
-> 📂 GIFs live in `docs/gifs/`. Drop `riding.gif`, `calibrating.gif`, `creating-arena.gif`, and `picking-arena.gif` in that folder and they'll show up here automatically.
 
 ---
 
