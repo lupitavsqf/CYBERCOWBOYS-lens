@@ -36,6 +36,9 @@ export class ArenaStreamerTyped extends BaseScriptComponent {
   @hint("FBX prefab for the FINISH line. Import finishline.fbx, make a prefab, drag it here. Placed on the floor like any obstacle.")
   finishLinePrefab: ObjectPrefab;
   @input @allowUndefined defaultObstaclePrefab: ObjectPrefab;
+  @input
+  @hint("Extra size multiplier applied ONLY to the start/finish line prefabs, on top of their own baked-in scale and obstacleBaseScale/arenaScale. Bump this up if the lines still look too small.")
+  startFinishLineExtraScale: number = 10.0;
 
   // Path floor decals / markers
   @input @allowUndefined pathTrianglePrefab: ObjectPrefab; // blue-triangle.png floor decal
@@ -58,6 +61,12 @@ export class ArenaStreamerTyped extends BaseScriptComponent {
   @input
   @hint("Spin the number by this many degrees if it ends up facing away from you (try 180).")
   numberTagYawOffsetDeg: number = 0;
+  @input
+  @hint("How far the number bobs up and down, in arena-metres, from its resting height. 0 = no float.")
+  numberTagFloatAmplitudeMeters: number = 0.15;
+  @input
+  @hint("How fast the number bobs up and down, in cycles per second.")
+  numberTagFloatSpeed: number = 0.6;
 
   // Tuning
   @input targetSession: number = 0; // 0 = newest session
@@ -84,10 +93,10 @@ export class ArenaStreamerTyped extends BaseScriptComponent {
   private dimsBySession: { [sid: number]: { dx: number; dy: number } } = {};
   private highWaterSession = 0;
 
-  private liveObstacles: { [id: number]: { so: SceneObject; inside: boolean; type: string } } = {};
+  private liveObstacles: { [id: number]: { so: SceneObject; inside: boolean; type: string; prefabScale: vec3 } } = {};
   // Floating number-tag text objects, kept apart from liveObstacles so they never
   // trigger the proximity sound (they're labels, not solid obstacles).
-  private liveNumberTags: { [id: number]: { so: SceneObject; text: Text } } = {};
+  private liveNumberTags: { [id: number]: { so: SceneObject; text: Text; baseHeightCm: number; floatPhase: number } } = {};
   private pathContainer: SceneObject | null = null;
 
   onAwake() {
@@ -273,7 +282,11 @@ export class ArenaStreamerTyped extends BaseScriptComponent {
       if (!entry) {
         const so = prefab.instantiate(this.arenaRoot);
         so.name = (o.object_name || o.OBJECT_NAME || type || "obstacle") + " #" + id;
-        entry = { so: so, inside: false, type: type };
+        // Capture whatever scale the prefab was authored with (e.g. start/finish
+        // line prefabs are baked at 10x) BEFORE we touch it, so calibration data
+        // multiplies on top of that instead of overwriting it with a flat 1x.
+        const prefabScale = so.getTransform().getLocalScale();
+        entry = { so: so, inside: false, type: type, prefabScale: prefabScale };
         this.liveObstacles[id] = entry;
       }
 
@@ -283,11 +296,19 @@ export class ArenaStreamerTyped extends BaseScriptComponent {
         dx, dy
       );
       const rotZ = this.coord(o, "cal_rotate_z", "CAL_ROTATE_Z", "rotate_z", "ROTATE_Z");
-      const scale = new vec3(
+      const isStartOrFinishLine = type === "startline" || type === "start-line" || type === "start"
+        || type === "finishline" || type === "finish-line" || type === "finish";
+      const extraScale = isStartOrFinishLine ? this.startFinishLineExtraScale : 1.0;
+      const calScale = new vec3(
         this.coord(o, "cal_scale_x", "CAL_SCALE_X", "scale_x", "SCALE_X") || 1,
         this.coord(o, "cal_scale_y", "CAL_SCALE_Y", "scale_y", "SCALE_Y") || 1,
         this.coord(o, "cal_scale_z", "CAL_SCALE_Z", "scale_z", "SCALE_Z") || 1
-      ).uniformScale(this.obstacleBaseScale * this.arenaScale);
+      ).uniformScale(this.obstacleBaseScale * this.arenaScale * extraScale);
+      const scale = new vec3(
+        calScale.x * entry.prefabScale.x,
+        calScale.y * entry.prefabScale.y,
+        calScale.z * entry.prefabScale.z
+      );
 
       const tr = entry.so.getTransform();
       tr.setLocalPosition(pos);
@@ -375,7 +396,7 @@ export class ArenaStreamerTyped extends BaseScriptComponent {
       // Centre the glyphs on the anchor so the number sits over its map spot.
       try { text.horizontalAlignment = HorizontalAlignment.Center; } catch (e) {}
       try { text.verticalAlignment = VerticalAlignment.Center; } catch (e) {}
-      entry = { so: so, text: text };
+      entry = { so: so, text: text, baseHeightCm: 0, floatPhase: Math.random() * Math.PI * 2 };
       this.liveNumberTags[id] = entry;
     }
     if (this.numberTagFont && entry.text.font !== this.numberTagFont) {
@@ -392,6 +413,7 @@ export class ArenaStreamerTyped extends BaseScriptComponent {
     const heightCm = this.numberTagHeightMeters * 100 * this.arenaScale;
     const s = this.numberTagScale * this.arenaScale;
 
+    entry.baseHeightCm = heightCm;
     const tr = entry.so.getTransform();
     tr.setLocalPosition(new vec3(pos.x, heightCm, pos.z));
     tr.setLocalScale(new vec3(s, s, s));
@@ -419,6 +441,19 @@ export class ArenaStreamerTyped extends BaseScriptComponent {
   private onUpdate() {
     if (!this.camera) return;
     const camPos = this.camera.getTransform().getWorldPosition();
+
+    // Float each number gently up and down around its resting height.
+    const amplitudeCm = this.numberTagFloatAmplitudeMeters * 100 * this.arenaScale;
+    const t = getTime();
+    if (amplitudeCm > 0) {
+      for (const k in this.liveNumberTags) {
+        const entry = this.liveNumberTags[k];
+        const tr = entry.so.getTransform();
+        const p = tr.getLocalPosition();
+        const offset = Math.sin(t * this.numberTagFloatSpeed * Math.PI * 2 + entry.floatPhase) * amplitudeCm;
+        tr.setLocalPosition(new vec3(p.x, entry.baseHeightCm + offset, p.z));
+      }
+    }
 
     // Billboard each floating number toward the wearer (yaw only, stays upright).
     if (this.numberTagFaceCamera) {

@@ -1,55 +1,20 @@
-- !<AssetImportMetadata/d1cc9b70-2b31-4f95-bab2-da07c5972412>
+- !<AssetImportMetadata/d512978d-db7d-4670-ab52-2e6818a497ba>
   ImportedAssetIds:
-    ObjectPrefab: !<reference> dda4e723-6f32-41e4-8969-d5a9381f9a2a
+    ObjectPrefab: !<reference> 46a31503-f14e-404d-b7a2-e346cd4e31c9
   ImporterName: ObjectPrefabImporter
-  PrimaryAsset: !<reference> dda4e723-6f32-41e4-8969-d5a9381f9a2a
+  PrimaryAsset: !<reference> 46a31503-f14e-404d-b7a2-e346cd4e31c9
   PackageType: NotAPackage
   LegacyPackagePolicy: ~
   ExtraData:
     {}
   AssetDataMap:
-    ObjectPrefab: !<own> 5dff8c51-131b-4758-80d8-d0b8ebbdd349
+    ObjectPrefab: !<own> c7511688-71a5-4354-82f7-3e1f285803c3
   DependentFiles:
     []
   ImporterSettings: !<AssetImporterSettings>
     {}
   CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
-- !<RenderMeshVisual/16667e55-c7b0-4495-583c-5b3f0af49c86>
-  PrefabRemaps:
-    []
-  Name: component_0
-  Enabled: true
-  RenderOrder: 0
-  StretchMode: Stretch
-  VerticalAlignment: Center
-  HorizontalAlignment: Center
-  MeshShadowMode: None
-  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
-  ShadowDensity: 1.000000
-  Materials:
-    - !<reference> 4da663bd-5fc9-4e23-bcdf-e22674017ac0
-  Mesh: !<reference> 79ea02b3-ec0e-4f0d-8515-5171cd7621f0
-  Skin: !<reference> 00000000-0000-0000-0000-000000000000
-  BlendShapesEnabled: true
-  BlendNormals: false
-  BlendShapes:
-    {}
-- !<SceneObject/387765be-3f56-4b4d-4df2-65275d5f9664>
-  PrefabRemaps:
-    []
-  Name: Pole_R
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 7643a6eb-f5d8-4101-6ccf-e6eb517c4a78
-- !<SceneObject/394e233c-da44-41c8-5611-83a9977d19de>
+- !<SceneObject/04a38a4d-1884-4c8a-7b7b-5d5b6467e917>
   PrefabRemaps:
     []
   Name: Banner
@@ -63,31 +28,23 @@
   Children:
     []
   Components:
-    - !<own> cc527ced-9d98-4ee5-642c-ae3cb8ed82ec
-- !<SceneObject/4d18effd-2d8b-4516-75f9-0d55d4ff997a>
+    - !<own> 84fae0b0-7b06-459e-4236-13450b8a1640
+- !<SceneObject/0bff5c6d-9b59-4879-72ff-268506781d36>
   PrefabRemaps:
     []
-  Name: start_line
+  Name: Pole_R
   Enabled: true
   Layers: 1
   LocalTransform: !<TransformEntity>
     Position: {x: 0.000000, y: 0.000000, z: 0.000000}
     Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
     HasSegmentScaleCompensation: false
   Children:
-    - !<own> f509e811-2b3e-4d0b-4209-613788d8623b
-    - !<own> 387765be-3f56-4b4d-4df2-65275d5f9664
-    - !<own> 394e233c-da44-41c8-5611-83a9977d19de
-    - !<own> a1e5db1a-0b5a-42e0-7304-0a45989d938f
-  Components:
     []
-- !<ObjectPrefabAssetData/5dff8c51-131b-4758-80d8-d0b8ebbdd349>
-  Prototype: !<ObjectOwner/53e838a0-f666-4c15-a7ec-9740baedf615>
-    PackagePath: ""
-    objects:
-      - !<own> 4d18effd-2d8b-4516-75f9-0d55d4ff997a
-- !<RenderMeshVisual/5e0e4e97-3d3d-46b3-4896-80dfe08a2a57>
+  Components:
+    - !<own> 817c9b09-e7bc-4d21-4102-abd8e9316db1
+- !<RenderMeshVisual/20e1cec1-9a21-4c4a-79dd-234f303b4be6>
   PrefabRemaps:
     []
   Name: component_3
@@ -107,7 +64,40 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<RenderMeshVisual/7643a6eb-f5d8-4101-6ccf-e6eb517c4a78>
+- !<SceneObject/3e3b95a2-3b1b-4706-6afd-100d3fad0ee2>
+  PrefabRemaps:
+    []
+  Name: start_line
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 10.000000, y: 10.000000, z: 10.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    - !<own> e336f29b-f166-4a4d-544d-9a9f6b00c6d2
+    - !<own> 0bff5c6d-9b59-4879-72ff-268506781d36
+    - !<own> 04a38a4d-1884-4c8a-7b7b-5d5b6467e917
+    - !<own> 4ac9bbcf-2e5b-4db7-7749-a67bd819ecb8
+  Components:
+    []
+- !<SceneObject/4ac9bbcf-2e5b-4db7-7749-a67bd819ecb8>
+  PrefabRemaps:
+    []
+  Name: GroundDecal
+  Enabled: true
+  Layers: 1
+  LocalTransform: !<TransformEntity>
+    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
+    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
+    HasSegmentScaleCompensation: false
+  Children:
+    []
+  Components:
+    - !<own> 20e1cec1-9a21-4c4a-79dd-234f303b4be6
+- !<RenderMeshVisual/817c9b09-e7bc-4d21-4102-abd8e9316db1>
   PrefabRemaps:
     []
   Name: component_1
@@ -127,22 +117,7 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/a1e5db1a-0b5a-42e0-7304-0a45989d938f>
-  PrefabRemaps:
-    []
-  Name: GroundDecal
-  Enabled: true
-  Layers: 1
-  LocalTransform: !<TransformEntity>
-    Position: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Rotation: {x: 0.000000, y: 0.000000, z: 0.000000}
-    Scale: {x: 1.000000, y: 1.000000, z: 1.000000}
-    HasSegmentScaleCompensation: false
-  Children:
-    []
-  Components:
-    - !<own> 5e0e4e97-3d3d-46b3-4896-80dfe08a2a57
-- !<RenderMeshVisual/cc527ced-9d98-4ee5-642c-ae3cb8ed82ec>
+- !<RenderMeshVisual/84fae0b0-7b06-459e-4236-13450b8a1640>
   PrefabRemaps:
     []
   Name: component_2
@@ -162,7 +137,32 @@
   BlendNormals: false
   BlendShapes:
     {}
-- !<SceneObject/f509e811-2b3e-4d0b-4209-613788d8623b>
+- !<RenderMeshVisual/c2b7d311-55b8-467c-7113-013f3313206e>
+  PrefabRemaps:
+    []
+  Name: component_0
+  Enabled: true
+  RenderOrder: 0
+  StretchMode: Stretch
+  VerticalAlignment: Center
+  HorizontalAlignment: Center
+  MeshShadowMode: None
+  ShadowColor: {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ShadowDensity: 1.000000
+  Materials:
+    - !<reference> 4da663bd-5fc9-4e23-bcdf-e22674017ac0
+  Mesh: !<reference> 79ea02b3-ec0e-4f0d-8515-5171cd7621f0
+  Skin: !<reference> 00000000-0000-0000-0000-000000000000
+  BlendShapesEnabled: true
+  BlendNormals: false
+  BlendShapes:
+    {}
+- !<ObjectPrefabAssetData/c7511688-71a5-4354-82f7-3e1f285803c3>
+  Prototype: !<ObjectOwner/be7e12f4-0907-42a7-b441-cf62298e5f3d>
+    PackagePath: ""
+    objects:
+      - !<own> 3e3b95a2-3b1b-4706-6afd-100d3fad0ee2
+- !<SceneObject/e336f29b-f166-4a4d-544d-9a9f6b00c6d2>
   PrefabRemaps:
     []
   Name: Pole_L
@@ -176,4 +176,4 @@
   Children:
     []
   Components:
-    - !<own> 16667e55-c7b0-4495-583c-5b3f0af49c86
+    - !<own> c2b7d311-55b8-467c-7113-013f3313206e

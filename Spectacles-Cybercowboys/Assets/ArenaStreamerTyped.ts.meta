@@ -41,6 +41,8 @@
     internetModule: false
     logTypes: false
     numberTagFaceCamera: false
+    numberTagFloatAmplitudeMeters: false
+    numberTagFloatSpeed: false
     numberTagFont: false
     numberTagHeightMeters: false
     numberTagScale: false
@@ -51,6 +53,7 @@
     pauseZonePrefab: false
     polePrefab: false
     proximityRadiusMeters: false
+    startFinishLineExtraScale: false
     startLinePrefab: false
     targetSession: false
     triangleSizeMeters: false
@@ -79,12 +82,15 @@
       startLinePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       finishLinePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       defaultObstaclePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
+      startFinishLineExtraScale: !<float> 10.000000
       pathTrianglePrefab: !<reference.ObjectPrefab> 00000000-0000-0000-0000-000000000000
       numberTagFont: !<reference.Font> 00000000-0000-0000-0000-000000000000
       numberTagHeightMeters: 1.500000
       numberTagScale: !<float> 1.000000
       numberTagFaceCamera: true
       numberTagYawOffsetDeg: !<float> 0.000000
+      numberTagFloatAmplitudeMeters: 0.150000
+      numberTagFloatSpeed: 0.600000
       targetSession: !<float> 0.000000
       arenaScale: !<float> 1.000000
       obstacleBaseScale: !<float> 1.000000
@@ -114,12 +120,15 @@
     - '// @input Asset.ObjectPrefab startLinePrefab {"hint":"FBX prefab for the START line. Import startline.fbx, make a prefab, drag it here. Placed on the floor like any obstacle."}'
     - '// @input Asset.ObjectPrefab finishLinePrefab {"hint":"FBX prefab for the FINISH line. Import finishline.fbx, make a prefab, drag it here. Placed on the floor like any obstacle."}'
     - // @input Asset.ObjectPrefab defaultObstaclePrefab
+    - '// @input float startFinishLineExtraScale = 10 {"hint":"Extra size multiplier applied ONLY to the start/finish line prefabs, on top of their own baked-in scale and obstacleBaseScale/arenaScale. Bump this up if the lines still look too small."}'
     - // @input Asset.ObjectPrefab pathTrianglePrefab
     - '// @input Asset.Font numberTagFont {"hint":"Zilla Slab font asset. Import ZillaSlab-Bold.ttf into Assets, then drag the Font asset here."}'
     - '// @input float numberTagHeightMeters = 1.5 {"hint":"How high the number floats off the floor, in arena-metres. ~1.5 ≈ eye / sight level at full arenaScale."}'
     - '// @input float numberTagScale = 1 {"hint":"Overall size multiplier for the floating number. Increase if the digits read too small."}'
     - '// @input bool numberTagFaceCamera = true {"hint":"Keep each number turned toward the wearer (yaw only, stays upright). Off = the number faces into the arena."}'
     - '// @input float numberTagYawOffsetDeg {"hint":"Spin the number by this many degrees if it ends up facing away from you (try 180)."}'
+    - '// @input float numberTagFloatAmplitudeMeters = 0.15 {"hint":"How far the number bobs up and down, in arena-metres, from its resting height. 0 = no float."}'
+    - '// @input float numberTagFloatSpeed = 0.6 {"hint":"How fast the number bobs up and down, in cycles per second."}'
     - // @input float targetSession
     - // @input float arenaScale = 1
     - // @input float obstacleBaseScale = 1
