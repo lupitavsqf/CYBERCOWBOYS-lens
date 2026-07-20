@@ -20,7 +20,7 @@
 
 ## 🌵 The story behind it
 
-After volunteering in assistive **equine therapy** sessions, we noticed something. Some riders with disabilities have a hard time receiving *verbal* instructions, but respond better to verbal instructions. Snap Spectacles is the technology we use in Cybercowboys to **communicate beyond words**.
+After volunteering in assistive **equine therapy** sessions, we noticed something. Some riders with disabilities have a hard time receiving *verbal* instructions, but respond better to tactile and visual instructions. Snap Spectacles is the technology we use in Cybercowboys to **communicate beyond words**.
 
 **CyberCowboys** is an augmented-reality riding experience where horse-riding lessons become something you can *see* laid out on the real arena floor in front of you. From elementary basic commands all the way up to advanced jumping courses.
 
